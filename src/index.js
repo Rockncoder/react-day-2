@@ -1,11 +1,16 @@
 import React from 'react';
-import { render } from 'react-dom';
+import {render} from 'react-dom';
 import './index.css';
-// import TodoList from './TodoList';
-//import './examples/higher-order'
 import Routes from './routes';
+import {Provider} from 'react-redux';
+import {createStore} from 'redux';
+import reducer from './reducer';
+
+const store = createStore(reducer);
 
 render(
-  <Routes />,
+  <Provider store={store}>
+    <Routes/>
+  </Provider>,
   document.getElementById('root')
 );
