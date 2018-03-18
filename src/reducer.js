@@ -2,7 +2,7 @@ import * as actions from './actions';
 
 const initialState = {
   value: 0,
-  buttons: ['7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', '0', '.', '+', 'C']
+  buttons: ['7', '8', '9', '/', '4', '5', '6', '*', '1', '2', '3', '-', '0', '.','=', '+', 'C']
 };
 
 export default (state = initialState, action) => {
