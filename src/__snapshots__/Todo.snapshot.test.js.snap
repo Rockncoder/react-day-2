@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Todo component renders the todo correctly 1`] = `
+<div
+  className="todo  todo-1"
+>
+  <span
+    className="toggle-todo"
+    onClick={[Function]}
+  >
+    Write more code
+  </span>
+  <button
+    className="delete-todo"
+    onClick={[Function]}
+  >
+    Delete
+  </button>
+</div>
+`;
