@@ -8,8 +8,11 @@
     "react-addons-css-transition-group": "^15.6.2",
     "react-addons-test-utils": "^15.6.2",
     "react-dom": "^16.2.0",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.2.2",
     "react-scripts": "1.1.1",
     "react-test-renderer": "^16.2.0",
+    "redux": "^3.7.2",
     "shortid": "^2.2.8",
     "uuid": "^3.2.1"
   },
