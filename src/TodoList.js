@@ -1,6 +1,7 @@
 import React from 'react';
 import uuidv4 from 'uuid/v4';
 import AddTodo from './AddTodo';
+import {toggleDone, addTodo, deleteTodo} from './state-functions';
 
 export default class TodoList extends React.Component {
   constructor(props){
@@ -15,7 +16,7 @@ export default class TodoList extends React.Component {
   }
 
   addTodo = todo => {
-    console.log('addTodo');
+    this.setState(addTodo(this.state, todo));
   };
 
 
