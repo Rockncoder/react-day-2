@@ -1,0 +1,95 @@
+body {
+    background: #eee;
+    font-family: Roboto, sans-serif;
+}
+
+#app {
+    width: 600px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 20px auto;
+}
+
+#app h1 {
+    margin-top: 0;
+}
+
+.todo p:hover {
+    cursor: pointer;
+}
+
+.delete-todo {
+    margin-left: 10px;
+    background: red;
+    border: 1px solid #000;
+}
+
+.done-todo {
+    text-decoration: line-through;
+}
+
+.add-todo {
+    margin-top: 30px;
+    border-top: 1px solid #ddd;
+    padding: 20px 0 10px 0;
+}
+
+.add-todo input {
+    width: 80%;
+    margin: 5px 0;
+    padding: 5px 0;
+    box-sizing: border-box;
+    font-size: 15px;
+}
+
+.add-todo button {
+    background: lightskyblue;
+    margin: 5px 0 5px 2px;
+    padding: 5px 0;
+    border: 1px solid #000;
+    font-size: 15px;
+    width: 18%;
+
+}
+
+.add-todo button:hover {
+    cursor: pointer;
+}
+
+.todo {
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.todo a {
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
+.example-enter {
+    opacity: 0.01;
+}
+
+.example-enter.example-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}
+
+.example-leave {
+    opacity: 1;
+}
+
+.example-leave.example-leave-active {
+    opacity: 0.01;
+    transition: opacity 300ms ease-in;
+}
+.example-appear {
+    opacity: 0.01;
+}
+
+.example-appear.example-appear-active {
+    opacity: 1;
+    transition: opacity .5s ease-in;
+}
