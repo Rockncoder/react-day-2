@@ -20,6 +20,14 @@ export default class TodoList extends React.Component {
     this.setState(addTodo(this.state, todo));
   };
 
+  deleteTodo = id => {
+    this.setState(deleteTodo(this.state, id));
+  };
+
+  toggleDone = id => {
+    this.setState(toggleDone(this.state, id));
+  };
+
   renderTodos(){
     return this.state.todos.map(todo => (
       <li key={todo.id}>
