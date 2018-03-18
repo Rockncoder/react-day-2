@@ -3,11 +3,12 @@ import uuidv4 from 'uuid/v4';
 import AddTodo from './AddTodo';
 import Todo from './Todo';
 import {toggleDone, addTodo, deleteTodo} from './state-functions';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 
 export default class TodoList extends React.Component {
-  constructor(props){
+  constructor(props) {
     super(props);
-    this.state ={
+    this.state = {
       todos: [
         {id: uuidv4(), name: 'Feed the cats', done: false},
         {id: uuidv4(), name: 'Wash the dishes', done: false},
@@ -28,7 +29,7 @@ export default class TodoList extends React.Component {
     this.setState(toggleDone(this.state, id));
   };
 
-  renderTodos(){
+  renderTodos() {
     return this.state.todos.map(todo => (
       <li key={todo.id}>
         <Todo
@@ -43,10 +44,18 @@ export default class TodoList extends React.Component {
   render() {
     return (
       <div>
-        <AddTodo onNewTodo={todo => this.addTodo(todo)} />
+        <AddTodo onNewTodo={todo => this.addTodo(todo)}/>
         <h2>Todos:</h2>
         <ul className="todos-list">
-          {this.renderTodos()}
+          <ReactCSSTransitionGroup
+            transitionName="example"
+            transitionAppear={true}
+            transitionAppearTimeout={500}
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={300}
+          >
+            {this.renderTodos()}
+          </ReactCSSTransitionGroup>
         </ul>
       </div>
     )
