@@ -5,7 +5,7 @@ import * as actions from './actions';
 export const Calc = ({value, buttons, addElem, clear, equal}) => (
   <div className="calc">
     <div className="value-container">
-      <input type="text" value={value}/>
+      <input type="text" readOnly={true} value={value}/>
     </div>
     <div className="buttons-container">
       {
